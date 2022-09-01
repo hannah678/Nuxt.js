@@ -1,9 +1,11 @@
 <template>
-  <Tutorial/>
+<div class="container">
+  <Hero />
+</div>
 </template>
 
 <script>
-export default {
-  name: 'IndexPage'
+export default{ 
+ 
 }
 </script>
