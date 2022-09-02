@@ -33,4 +33,7 @@
     .nav-left {
         margin-left: auto;
     }
+    a{
+        cursor:pointer;
+    }
 </style>

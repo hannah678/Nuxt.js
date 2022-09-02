@@ -1,4 +1,5 @@
 <template>
+  <!-- 컴포넌트들을 담을 페이지 -->
   <div>
     <Nav/>
     <div class="container">
@@ -19,7 +20,6 @@
 
 <script>
 import { largeCardSections, smallCardSections } from '../assets/data';
-import SmallCardDisplay from '../components/SmallCardDisplay.vue';
 
 export default{
     data() {
@@ -28,6 +28,5 @@ export default{
             smallCardSections,
         };
     },
-    components: { SmallCardDisplay }
 }
 </script>
