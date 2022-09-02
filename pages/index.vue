@@ -2,6 +2,7 @@
   <!-- 컴포넌트들을 담을 페이지 -->
   <div>
     <Nav/>
+    <nuxt/>
     <div class="container">
       <Hero />
       <LargeCardDisplay
