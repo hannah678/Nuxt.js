@@ -1,6 +1,4 @@
 <template>
-    <div>
-        <Nav/>
         <div class="container">
             <LargeCardDisplay
                 v-for="cardInfo in largeCardInfo.slice(0,1)"
@@ -13,7 +11,6 @@
                 :cardsSection="cardInfo"
             />
         </div>
-    </div>
 </template>
 <script>
 import {largeCardSections, smallCardSections } from "@/assets/data.js"

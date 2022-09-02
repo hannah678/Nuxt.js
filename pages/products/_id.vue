@@ -1,6 +1,4 @@
 <template>
-    <div>
-        <Nav/>
         <div v-if="product" class="container py-5">
             <div class="hero-container">
                 <img :src="require(`@/assets/images/${product.image}`)" alt="" class="image">
@@ -37,10 +35,9 @@
             </div>
             <Reviews />
         </div>
-        <div v-else class="container padding">
+        <div v-else class="container padding2">
             <PageNotFound />
         </div>
-    </div>
 </template>
 
 <script>
@@ -113,7 +110,7 @@ import Nav from '../../components/Nav.vue';
         margin-top: 3rem;
         color: grey
     }
-    .padding {
+    .padding2 {
         padding: 10rem 0
     }
 </style>
