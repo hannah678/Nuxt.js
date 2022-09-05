@@ -9,18 +9,23 @@
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, temporibus cumque! Id, tempore. Alias praesentium esse neque animi sit unde vel, quaerat earum, voluptates veritatis ab quod asperiores illo doloremque error laboriosam magni odio inventore cum voluptate provident. Numquam, facere.</p>
             </div>
             <vc-date-picker
-                :value="null"
-                color="purple"
-                is-dark
-                is-range
+              v-model="selectedDate"
+              value-format="yyyyMMdd"
+              locale="kr"
+              color="purple"
+              is-dark
+              is-range
             />
         </div>
         <b-button 
         id="show-btn" 
         variant="outline-danger"
         @click="() => {
-          addItem(product.id);
+          var id = product.id;
+          var start = selectedDate.start;
+          var end = selectedDate.end;
           hideModal();
+          addItem({id, start, end});
         }"
         >Order</b-button>
       </b-modal>
@@ -31,13 +36,21 @@
     import { mapMutations } from 'vuex'
 
     export default {
+      data() {
+        return {
+          selectedDate: {
+            start: new Date(),
+            end: new Date()
+          },
+        }
+      },
       props: ['product'],
       methods: {
         showModal() {
           this.$refs['my-modal'].show()
         },
         hideModal() {
-          this.$refs['my-modal'].hide()
+          this.$refs['my-modal'].hide();
         },
         toggleModal() {
           // We pass the ID of the button that we want to return focus to
