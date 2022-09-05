@@ -2,7 +2,7 @@
     <div class="Hero container">
         <div class="text-container">
             <h1 class="header">Find your Fire Extinguisher</h1>
-            <p class="snippet"></p>
+            <p class="snippet">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est et unde in quam velit id ea aperiam consectetur facere atque.</p>
             <button class="button btn">Start Looking</button>
         </div>
         <img src="~assets/svg/fire-extinguisher.svg" alt="fire extinguisher" class="image">
