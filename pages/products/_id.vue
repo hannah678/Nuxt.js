@@ -42,6 +42,7 @@
 
 <script>
 import Nav from '../../components/Nav.vue';
+import Reviews from '../../components/Reviews.vue';
 
     export default {
     computed: {
@@ -49,7 +50,7 @@ import Nav from '../../components/Nav.vue';
             return this.$store.getters.getProductById(this.$route.params.id);
         }
     },
-    components: { Nav }
+    components: { Nav, Reviews }
 }
 </script>
 
